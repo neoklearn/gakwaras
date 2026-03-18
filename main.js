@@ -309,8 +309,7 @@ function togglePlayerDetail(index) {
           <span class="font-pixel text-xl text-slate-400 lg:mb-1">a.k.a. ${player.aka}</span>
         </div>
         <div class="flex flex-wrap justify-center lg:justify-start gap-4 mb-4">
-          <span class="bg-primary/20 text-primary font-pixel text-xl px-3 py-1 rounded">${player.role}</span>
-          <span class="text-slate-400 font-pixel text-xl flex items-center">Joined: ${player.joinDate}</span>
+          ${player.roles.map(role => `<span class="bg-primary/20 text-primary font-pixel text-xl px-3 py-1 rounded">${role}</span>`).join('')}
         </div>
         <p class="text-slate-300 text-lg leading-relaxed text-center lg:text-left pb-2 w-full">${player.bio}</p>
       </div>
