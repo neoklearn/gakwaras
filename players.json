@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Steve",
+    "aka": "Nama Asli Steve",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAp2aUrTpOeCcYDZmutPU0yEjRN0faMj9CMCMtNXD8Kzf-1sj0J4viw9aJ_sNx1PiTF2pMmud6U3NdLMRvdGn2uC8hf3BzVwfcOV5UyJnoF8KmszRp34gStxhkAVEbYb-te0q1KMlQA5t4RfXpPjOUPE3ozxa_3aUj78AatGn8_p66AUCH5FZxcE_oGaQjeLOfAKKLJJlZeODowZk57TMsJgODi6Q1WC65sRGhYlWZKg_0I5vMxyVpWaPNH_xHREHvt63EBBOSWr9w",
+    "role": "Owner",
+    "joinDate": "2024-01-15",
+    "bio": "Founder of the server"
+  },
+  {
+    "name": "Alex",
+    "aka": "Nama Asli Alex",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4s8V7v6KlUMrjLeQL_vgYrc6pLxzIapLChqC72712ojTCbqiw73xIKZccEylDaXijukfaXSQl1gD5K177vzJ7wRHFhT-lNe1PaQSLyfltAnNaMyYweVtKds5NTa2H_7_Dpk21rXMkF2AsdXm0oHKGFeCHNkQ5qjWg3nJHr3A3A3qBcUYiT3TharQb_l55etchsg9EvTJS_YfR6y2-yaaYe95O18a9u6SYcy6qrTO-NAPKFrm_XQOryR7bKETnsJnGvNjaK2Wetyo",
+    "role": "Admin",
+    "joinDate": "2024-02-10",
+    "bio": "Server administrator"
+  },
+  {
+    "name": "Dream",
+    "aka": "Nama Asli Dream",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDrqolwoGKixRgI2NpfsGVeCLREoM3UJ4ccNcUmeT3xJaS7et9UmqIT7GZpDz4__9P8MqYMYZUgKhPGB--xYalLzctgvHncZ-xqAY4xdm1Nw8pKmFlX5lk45SE6HHbwZsbo_UAaAEU4iBIH_rJ3hfr2lLau7QRa3_ijKe1qwjki6kkTqRZi_CAeg-96x1pO_o90a9ryAjSqBFdEr4Avg7oWLIobT_rSYemBFkTKvYUk29awghqHVldAlqJPJY536VKPuFeBu50v-tE",
+    "role": "Member",
+    "joinDate": "2024-03-05",
+    "bio": "Just a regular player"
+  },
+  {
+    "name": "Notch",
+    "aka": "Nama Asli Notch",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_wzqUN66_mUPJga7WBDgYqgOeidh04UjUMDNyNxI1_trSQiv1KO52RFnlz0XiIKA--PM4djbF_JcP8YBZoV6SehfH_ELDsa4V0kHxDh-lBxaELxIl7EL5bRrOmRGxPHhjitG6FeAtNY2tQvMpJRKNaOcv0rLv3VvbAi4APoPj7Xd9KnmxGtD9TM06ykuPiAcPxOhdufctNqyITGFL0QL34b-nKJql6OKcVzmIezAs094k-9OnD8ZxqcyYm56VrAGrkYGMfbJ08Go",
+    "role": "Member",
+    "joinDate": "2024-04-20",
+    "bio": "Legendary builder"
+  },
+  {
+    "name": "Techno",
+    "aka": "Nama Asli Techno",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuDW8PxWzEUSY6nCDeLAL5Mo9FVUjD38BLTj9cY0ARWDo5CINxyujfaVPjmHsPyaBhq73CcofCo7MW5jVMReaEBZYJCPZNzo2T4PFtcj8jJZil1SpKPbqAfmXHtX3HeZB1NcHTB6Zwt8V2xSdoFFCdTBlxSXqqpB98u6bkhj4W0JIFCLDmBotZKl1RfL-WE1k3_1tk_SJCRE4V0uhOGIEANbRJhGH3QocEO23pk1ZBUUISP1I5hQ4wZWMUUMco4KUoOSlpEtW1tDTQw",
+    "role": "Member",
+    "joinDate": "2024-05-12",
+    "bio": "PvP champion"
+  },
+  {
+    "name": "Grian",
+    "aka": "Nama Asli Grian",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAH7ox2isJypCIrBrHVh8MLLdZ4ZuscS-sJfjXApAyOD91X8ByQpd19RK5rXP0wu56zaDnYPSUOje2z5IXL-QjDxB4Ti57fJTDhI-QvSvUcf9yrnpct8BnqIESW8WV6epXTRJNedWAzCD5e5geESjPuTkX93002OjnTZDC01uvHYmNlQUlRCPTQsTkecAX7QxVmZjSRFqcAkYrYQURoen_yfFC5eKp6_nAoPglxA--um2ySvqs_KksPAM0YZdph1S2JjazdQXvXiwM",
+    "role": "Builder",
+    "joinDate": "2024-06-01",
+    "bio": "Master architect"
+  }
+]
