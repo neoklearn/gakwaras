@@ -1,249 +1,37 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Gak Waras Server | Official Landing Page</title>
-  <meta name="description" content="Nikmati pengalaman Survival Vanilla+ yang tetap murni namun memukau, jelajahi kemegahan dunia melalui Expanded Biomes tanpa bioma tambahan yang asing, dan rasakan imersi maksimal lewat fitur Realtime Sync yang menyelaraskan waktu di dalam game dengan waktu di dunia nyata." />
-
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=VT323&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind Config -->
-  <script>
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#5e8c3b",
-            "accent": "#F4D142",
-            "background-light": "#f7f7f6",
-            "background-dark": "#181d15",
-            "minecraft-dark": "#1A1A1A",
-          },
-          fontFamily: {
-            "display": ["Inter", "sans-serif"],
-            "pixel": ["VT323", "monospace"]
-          },
-          borderRadius: {
-            "DEFAULT": "0.125rem",
-            "lg": "0.25rem",
-            "xl": "0.5rem",
-            "full": "0.75rem"
-          },
-        },
-      },
-    }
-  </script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" type="image/png" href="https://i.imgur.com/jtojeoH.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+    <style>
+        .hero {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .fade {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+        }
+    </style>
 </head>
-
-<body class="bg-background-light dark:bg-minecraft-dark font-display text-slate-900 dark:text-slate-100 bg-dirt selection:bg-primary selection:text-white">
-  <div class="relative flex min-h-screen flex-col overflow-x-hidden">
-
-    <!-- ============================== -->
-    <!-- 1. NAVBAR                      -->
-    <!-- ============================== -->
-    <header id="navbar" class="sticky top-0 z-50 w-full border-b-4 border-black bg-background-dark/95 backdrop-blur-sm px-6 py-4">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <img src="https://i.imgur.com/jtojeoH.png" alt="GWS Logo" style="width: 40px; height: 40px;">
-          <h2 class="font-pixel text-3xl tracking-wider text-white">GAK WARAS</h2>
-        </div>
-        <nav class="hidden md:flex items-center gap-8"></nav>
-        <div class="flex items-center gap-4">
-          <button id="btn-discord" class="btn-3d bg-primary hover:bg-primary/90 text-white font-pixel text-xl px-6 py-2 rounded flex items-center gap-2 cursor-pointer">
-            <span class="material-symbols-outlined text-sm">chat</span> JOIN DISCORD
-          </button>
-        </div>
-      </div>
-    </header>
-
-    <main class="flex-1">
-
-      <!-- ============================== -->
-      <!-- 2. HERO SECTION                -->
-      <!-- ============================== -->
-      <section id="hero" class="relative py-20 px-6 overflow-hidden">
-        <div class="max-w-5xl mx-auto text-center relative z-10">
-          <div class="inline-block mb-6 bg-black/40 backdrop-blur-md p-8 pixel-border rounded-lg">
-            <h1 class="font-pixel text-6xl md:text-8xl text-white tracking-tighter mb-4 drop-shadow-[0_5px_0_rgba(0,0,0,1)]">
-              GAK WARAS SERVER
-            </h1>
-            <div class="flex flex-col items-center gap-6 mt-8">
-              <!-- Server Online/Offline Badge (dynamic) -->
-              <div id="status-badge" class="flex items-center gap-3 bg-black/60 px-6 py-2 rounded border-2 border-primary/50 status-glow">
-                <span id="status-dot" class="flex h-3 w-3 rounded-full bg-primary animate-pulse"></span>
-                <span id="status-text" class="font-pixel text-2xl text-primary tracking-widest uppercase">Loading...</span>
-              </div>
-              <!-- Copy Fields (click to copy, no icon) -->
-              <div class="flex flex-col md:flex-row items-center justify-center gap-4 w-full">
-                <!-- Server Address -->
-                <div class="relative group w-full md:w-auto">
-                  <button id="copy-address" class="btn-3d bg-background-dark hover:bg-zinc-800 text-white font-pixel text-xl px-6 py-3 rounded pixel-border flex items-center justify-center gap-4 w-full md:w-auto min-w-[280px] cursor-pointer" data-copy="mc.serverhub.com">
-                    <div class="flex flex-col items-center text-center">
-                      <span class="text-[10px] text-slate-400 uppercase tracking-widest leading-none mb-1">Server Address</span>
-                      <span class="text-2xl">mc.serverhub.com</span>
-                    </div>
-                  </button>
-                  <div class="copy-toast absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none opacity-0 font-pixel text-primary bg-black/80 px-3 py-1 rounded">Copied!</div>
-                </div>
-                <!-- Port -->
-                <div class="relative group w-full md:w-auto">
-                  <button id="copy-port" class="btn-3d bg-background-dark hover:bg-zinc-800 text-white font-pixel text-xl px-6 py-3 rounded pixel-border flex items-center justify-center gap-4 w-full md:w-auto min-w-[140px] cursor-pointer" data-copy="19132">
-                    <div class="flex flex-col items-center text-center">
-                      <span class="text-[10px] text-slate-400 uppercase tracking-widest leading-none mb-1">Port</span>
-                      <span class="text-2xl">19132</span>
-                    </div>
-                  </button>
-                  <div class="copy-toast absolute left-1/2 -translate-x-1/2 top-0 pointer-events-none opacity-0 font-pixel text-primary bg-black/80 px-3 py-1 rounded">Copied!</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Hero Background - MP4 Video dengan Fallback -->
-        <!-- Hero Background - MP4 Video dengan Fallback -->
-        <div class="absolute inset-0 z-0 opacity-30">
-          <video autoplay loop muted class="w-full h-full object-cover hero-background">
-            <source src="https://i.imgur.com/GspV7Ol.mp4" type="video/mp4">
-            <img alt="Cinematic Minecraft landscape background" class="w-full h-full object-cover"
-              src="https://i.imgur.com/eUZmN3Y.png" />
-          </video>
-        </div>
-      </section>
-
-      <!-- ============================== -->
-      <!-- 3. STATS BAR                   -->
-      <!-- ============================== -->
-      <section id="stats" class="max-w-7xl mx-auto px-6 py-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <!-- Players Online (dynamic) -->
-          <div class="bg-background-dark/80 p-6 pixel-border flex flex-col gap-4">
-            <div class="flex justify-between items-end">
-              <p class="font-pixel text-xl text-slate-400">PLAYERS ONLINE</p>
-              <p id="players-count" class="font-pixel text-3xl text-primary">--/--</p>
-            </div>
-            <div class="h-6 w-full bg-black/50 border-2 border-black p-1">
-              <div id="health-bar" class="h-full bg-primary transition-all duration-500" style="width: 0%;"></div>
-            </div>
-          </div>
-          <!-- Version | Mode (dynamic) -->
-          <div class="bg-background-dark/80 p-6 pixel-border flex flex-col gap-2">
-            <p class="font-pixel text-xl text-slate-400">VERSION | MODE</p>
-            <p id="version-text" class="font-pixel text-3xl text-white">---</p>
-            <p id="gamemode-text" class="font-pixel text-2xl text-accent">---</p>
-          </div>
-          <!-- Performance (gimmick TPS & Ping) -->
-          <div class="bg-background-dark/80 p-6 pixel-border flex flex-col gap-2">
-            <p class="font-pixel text-xl text-slate-400">PERFORMANCE</p>
-            <div class="flex items-center justify-between w-full mt-2">
-              <span id="tps-text" class="font-pixel text-3xl text-primary">20 TPS</span>
-              <span id="ping-text" class="font-pixel text-2xl text-slate-300">--ms</span>
-            </div>
-          </div>
-          <!-- World Info (WIB Time) -->
-          <div class="bg-background-dark/80 p-6 pixel-border flex flex-col gap-2">
-            <p class="font-pixel text-xl text-slate-400">WORLD INFO</p>
-            <div class="flex flex-col gap-1 mt-1">
-              <p class="font-pixel text-2xl text-white uppercase">Hard Difficulty</p>
-              <p class="font-pixel text-2xl text-accent">Time: <span id="wib-clock">--:--</span></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ============================== -->
-      <!-- 4. CURRENT PLAYERS (from JSON) -->
-      <!-- ============================== -->
-      <section id="players" class="max-w-7xl mx-auto px-6 py-12">
-        <div class="flex items-center gap-4 mb-8">
-          <span class="h-1 flex-1 bg-black"></span>
-          <h2 class="font-pixel text-4xl text-white tracking-widest px-4">CURRENT PLAYERS</h2>
-          <span class="h-1 flex-1 bg-black"></span>
-        </div>
-        <!-- Players rendered dynamically by main.js from players.json -->
-        <div id="players-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
-          <!-- Loading shimmer placeholders -->
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-          <div class="shimmer w-full aspect-[3/4] rounded pixel-border"></div>
-        </div>
-      </section>
-
-      <!-- ============================== -->
-      <!-- 5. FEATURES                    -->
-      <!-- ============================== -->
-      <section id="features" class="max-w-7xl mx-auto px-6 py-12 mb-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="bg-background-dark p-8 pixel-border group hover:bg-primary/10 transition-colors">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center bg-primary rounded pixel-border">
-              <span class="material-symbols-outlined text-white text-4xl">landscape</span>
-            </div>
-            <h3 class="font-pixel text-3xl text-white mb-4">Survival Vanilla+</h3>
-            <p class="text-slate-400 font-display leading-relaxed">Menawarkan pengalaman bertahan hidup yang tetap setia pada mekanik asli namun diperkaya dengan detail tambahan yang memukau. Tanpa mengubah keseluruhan gameplay, setiap aspek permainan terasa lebih segar dan modern bagi pemain yang menyukai kemurnian Minecraft.</p>
-          </div>
-          <div class="bg-background-dark p-8 pixel-border group hover:bg-primary/10 transition-colors">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center bg-primary rounded pixel-border">
-              <span class="material-symbols-outlined text-white text-4xl">forest</span>
-            </div>
-            <h3 class="font-pixel text-3xl text-white mb-4">Expanded Biomes</h3>
-            <p class="text-slate-400 font-display leading-relaxed">Dunia kini terasa jauh lebih unik dan megah melalui perluasan skala pada setiap bioma yang sudah ada. Tanpa menambahkan jenis bioma baru, setiap area yang dijelajahi memiliki bentang alam yang lebih luas dan masif untuk memberikan sensasi petualangan yang sesungguhnya.</p>
-          </div>
-          <div class="bg-background-dark p-8 pixel-border group hover:bg-primary/10 transition-colors">
-            <div class="w-16 h-16 mb-6 flex items-center justify-center bg-primary rounded pixel-border">
-              <span class="material-symbols-outlined text-white text-4xl">schedule</span>
-            </div>
-            <h3 class="font-pixel text-3xl text-white mb-4">Realtime Sync</h3>
-            <p class="text-slate-400 font-display leading-relaxed">Sistem ini menghubungkan waktu di dalam Minecraft secara langsung dengan waktu di dunia nyata untuk menciptakan petualangan yang benar-benar imersif. Setiap perubahan siklus siang dan malam mengikuti jam asli di kehidupan nyata, sehingga memberikan tantangan unik dalam mengatur strategi bertahan hidup</p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- ============================== -->
-    <!-- 6. FOOTER                      -->
-    <!-- ============================== -->
-    <footer id="footer" class="bg-black py-12 px-6">
-      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-        <div class="flex flex-col gap-2">
-          <div class="flex items-center gap-2">
-            <img src="https://i.imgur.com/jtojeoH.png" alt="GWS Logo" style="width: 40px; height: 40px;">
-            <span class="font-pixel text-2xl text-white">GAK WARAS SERVER</span>
-          </div>
-          <p class="text-slate-500 font-pixel text-lg">Situs ini dirancang dan dikembangkan oleh NeokLearn melalui kolaborasi dengan kecerdasan buatan (AI).</p>
-          <p class="text-slate-500 font-pixel text-lg">Copyright © 2026 Hak Cipta Dilindungi Undang-Undang.</p>
-        </div>
-        <div class="flex gap-12">
-          <div class="flex flex-col gap-3">
-            <p class="font-pixel text-xl text-primary">COMMUNITY</p>
-            <a id="link-discord" class="text-slate-400 hover:text-white font-pixel text-lg transition-colors cursor-pointer" href="#">Join Discord</a>
-            <a id="link-contact" class="text-slate-400 hover:text-white font-pixel text-lg transition-colors cursor-pointer" href="#">Contact Admin</a>
-          </div>
-          <div class="flex flex-col gap-3">
-            <p class="font-pixel text-xl text-primary">SUPPORT</p>
-            <a id="link-donation" class="text-slate-400 hover:text-white font-pixel text-lg transition-colors cursor-pointer" href="#">Donation</a>
-            <a id="link-rules" class="text-slate-400 hover:text-white font-pixel text-lg transition-colors cursor-pointer" href="#">Server Rules</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-  </div>
-
-  <!-- Entry JS -->
-  <script type="module" src="/main.js"></script>
+<body>
+    <div class="hero">
+        <video autoplay muted loop>
+            <source src="path/to/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="fade"></div>
+    </div>
 </body>
 </html>
