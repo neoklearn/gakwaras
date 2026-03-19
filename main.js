@@ -177,14 +177,14 @@ function randomInRange(min, max) {
 
 function updateGimmickTPS() {
   if (!tpsText) return;
-  const tps = randomInRange(18, 20);
+  let tps = randomInRange(18, 20);
   tpsText.textContent = `${tps} TPS`;
 
   // Color based on TPS
   tpsText.classList.remove('text-primary', 'text-yellow-400', 'text-red-400');
   if (tps >= 19) {
     tpsText.classList.add('text-primary');
-  } else if (tps = 18) {
+  } else if (tps === 18) {
     tpsText.classList.add('text-yellow-400');
   } else {
     tpsText.classList.add('text-yellow-400');
