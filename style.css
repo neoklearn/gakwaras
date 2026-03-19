@@ -145,3 +145,31 @@
 #tps-text, #ping-text {
   transition: color 0.3s ease;
 }
+
+/* ================================ */
+/* Disable Selection on Page         */
+/* ================================ */
+
+/* Disable selection pada semua elemen */
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Aktifkan selection hanya untuk tombol copy-address dan copy-port */
+#copy-address,
+#copy-port,
+#copy-address *,
+#copy-port * {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
+/* Nonaktifkan right-click context menu */
+body {
+  -webkit-touch-callout: none;
+}
