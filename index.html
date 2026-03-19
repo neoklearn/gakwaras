@@ -43,6 +43,7 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" type="image/png" href="https://i.imgur.com/jtojeoH.png">
 </head>
 
 <body class="bg-background-light dark:bg-minecraft-dark font-display text-slate-900 dark:text-slate-100 bg-dirt selection:bg-primary selection:text-white">
@@ -54,7 +55,7 @@
     <header id="navbar" class="sticky top-0 z-50 w-full border-b-4 border-black bg-background-dark/95 backdrop-blur-sm px-6 py-4">
       <div class="max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary text-4xl">view_in_ar</span>
+          <img src="https://i.imgur.com/jtojeoH.png" alt="GWS Logo" style="width: 40px; height: 40px;">
           <h2 class="font-pixel text-3xl tracking-wider text-white">GAK WARAS</h2>
         </div>
         <nav class="hidden md:flex items-center gap-8"></nav>
@@ -109,10 +110,14 @@
             </div>
           </div>
         </div>
-        <!-- Hero Background -->
+        <!-- Hero Background - MP4 Video dengan Fallback -->
         <div class="absolute inset-0 z-0 opacity-30">
-          <img alt="Cinematic Minecraft landscape background" class="w-full h-full object-cover grayscale"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUVijsKGxRS6lTY2nuQ---xutgLQs04ZPePIaLRMMBLshoAFKiJ-L7PsnKMD2ZiMQpiMvgiH2KZFXYZt85AwpDEE_OJDPIZaQZIU0fl19qSwTWB2kIZuWJH5NxgeauIFXj8CxFH1_kx4ClsDt4pWG9U5puCel59YF1bMBTGZBMpEhfeWalOoKusq0wstwpP4mqmEKgW7jObZpj0hS_6RMohtfSlkSIVU296wE7BjEb9a-qc8B-vM-RZE3xNG946zFs9tn1cMxZrMQ" />
+          <video autoplay loop muted class="w-full h-full object-cover grayscale hero-background">
+            <source src="https://i.imgur.com/GspV7Ol.mp4" type="video/mp4">
+            <!-- Fallback jika video tidak support -->
+            <img alt="Cinematic Minecraft landscape background" class="w-full h-full object-cover grayscale"
+              src="https://i.imgur.com/eUZmN3Y.png" />
+          </video>
         </div>
       </section>
 
@@ -215,7 +220,7 @@
       <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div class="flex flex-col gap-2">
           <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary">view_in_ar</span>
+            <img src="https://i.imgur.com/jtojeoH.png" alt="GWS Logo" style="width: 40px; height: 40px;">
             <span class="font-pixel text-2xl text-white">GAK WARAS SERVER</span>
           </div>
           <p class="text-slate-500 font-pixel text-lg">Situs ini dirancang dan dikembangkan oleh NeokLearn melalui kolaborasi dengan kecerdasan buatan (AI).</p>
