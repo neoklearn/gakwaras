@@ -177,14 +177,14 @@ function randomInRange(min, max) {
 
 function updateGimmickTPS() {
   if (!tpsText) return;
-  const tps = randomInRange(17, 20);
+  const tps = randomInRange(18, 20);
   tpsText.textContent = `${tps} TPS`;
 
   // Color based on TPS
   tpsText.classList.remove('text-primary', 'text-yellow-400', 'text-red-400');
   if (tps >= 19) {
     tpsText.classList.add('text-primary');
-  } else if (tps >= 18) {
+  } else if (tps = 18) {
     tpsText.classList.add('text-yellow-400');
   } else {
     tpsText.classList.add('text-yellow-400');
@@ -196,12 +196,12 @@ function updateGimmickPing() {
 
   // 5% chance of spike to ~100ms
   const isSpike = Math.random() < 0.05;
-  const ping = isSpike ? randomInRange(90, 110) : randomInRange(50, 78);
+  const ping = isSpike ? randomInRange(70, 79) : randomInRange(82, 137);
   pingText.textContent = `${ping}ms`;
 
   // Color: normal = white, spike = yellow
   pingText.classList.remove('text-slate-300', 'text-yellow-400');
-  if (ping >= 90) {
+  if (ping >= 80) {
     pingText.classList.add('text-yellow-400');
   } else {
     pingText.classList.add('text-slate-300');
