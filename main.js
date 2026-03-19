@@ -180,8 +180,8 @@ function updateGimmickTPS() {
 function updateGimmickPing() {
   if (!pingText) return;
 
-  // 15% chance of spike to ~100ms
-  const isSpike = Math.random() < 0.15;
+  // 5% chance of spike to ~100ms
+  const isSpike = Math.random() < 0.05;
   const ping = isSpike ? randomInRange(90, 110) : randomInRange(50, 78);
   pingText.textContent = `${ping}ms`;
 
@@ -194,16 +194,16 @@ function updateGimmickPing() {
   }
 }
 
-// Update TPS setiap 3–5 detik, Ping setiap 2–4 detik
+// Update TPS setiap 1–1.5 detik, Ping setiap 2–4 detik
 function scheduleGimmickTPS() {
   updateGimmickTPS();
-  const next = randomInRange(3000, 5000);
+  const next = randomInRange(1000, 1500);
   setTimeout(scheduleGimmickTPS, next);
 }
 
 function scheduleGimmickPing() {
   updateGimmickPing();
-  const next = randomInRange(2000, 4000);
+  const next = randomInRange(1500, 2000);
   setTimeout(scheduleGimmickPing, next);
 }
 
