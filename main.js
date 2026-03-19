@@ -51,6 +51,20 @@ document.querySelectorAll('[data-copy]').forEach((el) => {
   });
 });
 
+// Disable right-click dan context menu di luar tombol copy
+document.addEventListener('contextmenu', function(e) {
+  if (!e.target.closest('#copy-address') && !e.target.closest('#copy-port')) {
+    e.preventDefault();
+  }
+});
+
+// Disable text selection dengan keyboard
+document.addEventListener('selectstart', function(e) {
+  if (!e.target.closest('#copy-address') && !e.target.closest('#copy-port')) {
+    e.preventDefault();
+  }
+});
+
 // =============================================
 // WIB Clock (UTC+7) — Real-time
 // =============================================
