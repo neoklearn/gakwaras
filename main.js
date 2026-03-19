@@ -8,11 +8,11 @@
 // =============================================
 const API_URL = 'https://api.mcstatus.io/v2/status/bedrock/premium2.raehost.com:25699';
 const REFRESH_INTERVAL = 60000; // 60 detik
-const DISCORD_URL = 'https://discord.gg/GANTI_INI';
-const DONATION_URL = 'https://GANTI_INI';
+const DISCORD_URL = 'https://discord.gg/MQR5WEehGA';
+const DONATION_URL = 'https://discord.gg/MQR5WEehGA';
 const CONTACT_EMAIL = 'admin@gakwaras.my.id';
-const RULES_URL = 'https://discord.com/channels/GANTI_INI';
-const SERVER_ADDRESS = 'mc.serverhub.com';
+const RULES_URL = 'https://discord.gg/MQR5WEehGA';
+const SERVER_ADDRESS = 'gvhjn';
 const SERVER_PORT = '19132';
 
 // =============================================
