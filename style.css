@@ -90,6 +90,12 @@ body {
   transition: color 0.3s ease;
 }
 
+.bg-dirt {
+  background-color: #373737;
+  background-image: none;
+  background-attachment: fixed;
+}
+
 /* ============================================================
    4. PLAYER DETAIL & EXPAND SYSTEM
    ============================================================ */
