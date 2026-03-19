@@ -211,7 +211,7 @@ function updateGimmickPing() {
 // Update TPS setiap 1–1.5 detik, Ping setiap 2–4 detik
 function scheduleGimmickTPS() {
   updateGimmickTPS();
-  const next = randomInRange(1000, 1500);
+  const next = randomInRange(500, 1000);
   setTimeout(scheduleGimmickTPS, next);
 }
 
