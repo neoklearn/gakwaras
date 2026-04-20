@@ -6,14 +6,14 @@
 // =============================================
 // REMOTE CONFIG — Ganti disini saja
 // =============================================
-const API_URL = 'https://api.mcstatus.io/v2/status/bedrock/premium-6.alstore.space:10017';
-const REFRESH_INTERVAL = 60000; // 60 detik
+const API_URL = 'https://api.mcstatus.io/v2/status/bedrock/basic-8.alstore.space';
+const REFRESH_INTERVAL = 60000;
 const DISCORD_URL = 'https://discord.gg/MQR5WEehGA';
 const DONATION_URL = 'https://tako.id/gwserver';
-const CONTACT_EMAIL = 'admin@gakwaras.my.id';
+const CONTACT_EMAIL = 'naufalgrozak@gmail.com';
 const RULES_URL = 'https://discord.gg/MQR5WEehGA';
 const SERVER_ADDRESS = 'play.gakwaras.my.id';
-const SERVER_PORT = '10017';
+const SERVER_PORT = '23100';
 
 // =============================================
 // DOM Elements
